@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+/>
+<title>速習Python</title>
+</head>
+<body>
+<!--メンバー情報をグループ化-->
+{% regroup members|dictsort:"sex" by sex as slist%}
+<!--グループ毎にループ-->
+<ul>
+ {%for s in slist %}
+  <li>{{s.grouper}}
+   <ul>
+    <!--グループ配下の要素をループ-->
+    {% for m in s.list %}
+     <li style="background-color:{% cycle 'skyblue' 'aquamarine' 'lightgreen' 'khaki' %}">{{m.name}}({{m.birth}})</li>
+    {% endfor %}
+   </ul>
+   <!--{% resetcycle %}-->
+  </li>
+ {% endfor %}
+</ul>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<!--親テンプレートを継承-->
+{% extends 'main/layout.html' %}
+<!--個々のブロックを定義-->
+{% block main %}
+<!--include_sub.htmlをインクルード-->
+{% include 'main/include_sub.html' with fmt='H:i:s' %}
+{% endblock main %}

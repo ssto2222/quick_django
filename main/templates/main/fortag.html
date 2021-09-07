@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+/>
+<title>速習Python</title>
+</head>
+<body>
+<!--半角空白10個の文字列を生成-->
+{% with range=''|center:n %}
+ <!--10桁の文字列を順に処理-->
+ {% for _ in range %}
+  <p>こんにちは、赤ちゃん！</p>
+ {%endfor%}
+{% endwith %}
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+<!--個々のブロックを定義-->
+{% block main %}
+<!--include_sub.htmlをインクルード-->
+{% load static %}
+<img src="{%static 'img/sample.jpg'%}"/>
+{% endblock main %}
+
+{% block sub %}
+<!--include_sub.htmlをインクルード-->
+{% load static %}
+<img src="{%static 'img/sample.jpg'%}"/>
+{% endblock sub %}
